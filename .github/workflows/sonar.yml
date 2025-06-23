@@ -21,7 +21,7 @@ jobs:
           cmake -S . -B build
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2
+        uses: SonarSource/sonarcloud-github-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
